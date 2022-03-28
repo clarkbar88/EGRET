@@ -1,7 +1,8 @@
 library(cowplot)
 library(ggplot2)
 library(scales)
-conc_plots<-plot_grid(
+conc_multi_plot<-function(eList){
+  plot_grid(
   ggdraw()+
     draw_label(paste0(eList$INFO$shortName,'\n', eList$INFO$paramShortName)),
   plot_grid(
@@ -31,3 +32,4 @@ conc_plots<-plot_grid(
     NULL,
     ncol=2),
   ncol=1,rel_heights =c(.1,1))
+}
