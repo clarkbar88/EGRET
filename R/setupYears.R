@@ -88,6 +88,9 @@ setupYears<-function(localDaily, paLong = 12, paStart = 10){
     lastDay <- daysInMonths[lastMonth]
     lastYear <- floor(localDaily$DecYear[localDaily$MonthSeq == stopMonth][1])
     
+     if(is.na(lastMonth)|is.na(firstDay_i)) next #skip incomplete years
+
+    
     if(lastMonth == 2 &
        (lastYear %% 4 == 0) & ((lastYear %% 100 != 0) | (lastYear%%400 == 0))){ #leap
       lastDay <- 29
