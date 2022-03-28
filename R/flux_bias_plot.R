@@ -2,8 +2,9 @@
 library(cowplot)
 library(ggplot2)
 library(scales)
+flux_bias_plot<-function(eList,parmID){
 augSample<-makeAugmentedSample(eList)$Sample
-flux_bias<-plot_grid(
+cowplot::plot_grid(
   ggdraw()+
     draw_label(paste0(eList$INFO$shortName,', ', eList$INFO$paramShortName,'\n',
                       'Model is WRTDS Flux Bias Statistic: ',round(fluxBiasStat(eList$Sample)[1],3))),
@@ -78,3 +79,4 @@ augSample %>%
 ncol = 2
 ),
 ncol=1,rel_heights =c(.1,1))
+}
