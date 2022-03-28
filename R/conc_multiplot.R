@@ -1,3 +1,6 @@
+#' Creates ggplot multiplot
+#' @param eList named list with at least the Daily dataframe
+
 library(cowplot)
 library(ggplot2)
 library(scales)

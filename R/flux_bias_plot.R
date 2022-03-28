@@ -1,3 +1,6 @@
+#' Creates ggplot multiplot for flux bias
+#' @param eList named list with at least the Daily dataframe
+#' @param parmID shortname for parameter (e.g., 'tp')
 #flux bias plots
 library(cowplot)
 library(ggplot2)
