@@ -1,3 +1,6 @@
+library(cowplot)
+library(ggplot2)
+library(scales)
 conc_plots<-plot_grid(
   ggdraw()+
     draw_label(paste0(eList$INFO$shortName,'\n', eList$INFO$paramShortName)),
