@@ -1,4 +1,7 @@
 #flux bias plots
+library(cowplot)
+library(ggplot2)
+library(scales)
 augSample<-makeAugmentedSample(eList)$Sample
 flux_bias<-plot_grid(
   ggdraw()+
